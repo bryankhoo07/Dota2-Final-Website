@@ -214,7 +214,13 @@ def format_hero_img(name):
         'clockwerk': 'rattletrap',
         'windranger': 'windrunner',
         'zeus': 'zuus',
-        'vengeful spirit': 'vengefulspirit'
+        'vengeful spirit': 'vengefulspirit',
+        'lifestealer':'life_stealer',
+        'shadow fiend':'nevermore',
+        'doom': 'doom_bringer',
+        'natures prophet': 'furion',
+        'underlord':'abyssal_underlord',
+        'necrophos':'necrolyte'
     }
 
     final_name = name_map.get(name.lower(), img_name)

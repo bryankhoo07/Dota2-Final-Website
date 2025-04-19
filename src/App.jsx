@@ -6,6 +6,7 @@ import Select from "./Select.jsx"
 import './App.css'
 import WinProbabilityChart from './Barchart.jsx'
 import { heroesIdMapping } from './heroesIdMapping';
+import { Colors } from 'chart.js'
 
 
 
@@ -14,6 +15,8 @@ import { heroesIdMapping } from './heroesIdMapping';
 
 
 function App() {
+  const [showInstructions, setShowInstructions] = useState(true);
+
   const [selectedHeroes, setSelectedHeroes] = useState(Array(10).fill(null));
   const [suggestedHeroes, setSuggestedHeroes] = useState([]);
 
@@ -62,7 +65,7 @@ function App() {
     console.log("Selected hero IDs:", selectedHeroIds);
   
     try {
-      const response = await fetch('http://localhost:5000/api/winprob', {
+      const response = await fetch('http://localhost:5000/api/winprob',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,13 +99,40 @@ function App() {
   
   return (
     <>
+    {showInstructions && (
+      
+      <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
+        <div className="bg-white rounded-lg p-6 max-w-xl text-center shadow-lg">
+        <h1 className="text-left text-black">Instructions</h1>
+          <ul className="text-left list-disc list-inside mb-4 text-gray-800">
+            <li>Pick heroes for Your Team (left) and Opponent's Team (right) using the dropdowns below.</li>
+            <li>Once you have at least 2 Radiant and 2 Dire heroes selected, the assistant will suggest top picks at the bottom of the page</li>
+            <li>The suggestor will constantly update for every pick from each team</li>
+            <li>Click the blue button below to see the win probability after all heroes are selected!</li>
+          </ul>
+          <button
+            className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            onClick={() => setShowInstructions(false)}
+          >
+            Got it!
+          </button>
+        </div>
+      </div>
+    )}
+    
     
       {/* Draft container with background image */}
-      <div 
-        className="relative bg-[url(./assets/dota-dota2-radiant-dire-logo.webp)] bg-opacity-20 bg-left pt-[300px]  flex flex-col gap-[1px] w-full h-1/2 bg-cover bg-left "
-      >
-        {/* Navbar */}
-        <div className="flex items-center text-white w-full absolute top-0 left-0 right-0 z-10 ">
+      
+      <div className="relative w-full h-screen">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <div className="w-full h-full bg-[url('./assets/dota-dota2-radiant-dire-logo.webp')] bg-cover bg-left" />
+        <div className="absolute inset-0 bg-black opacity-30" />
+      </div>
+      {/* Foreground Content */}
+        <div className="relative z-10">
+          {/*Navbar*/}
+          <div className="flex items-center text-white w-full top-0 left-0 right-0 z-10 ">
           <a href="https://upload.wikimedia.org/wikipedia/commons/c/c2/Dota_logo.svg">
             <img 
               src={dotaLogo} 
@@ -112,22 +142,24 @@ function App() {
           </a>
           
           <div>
-            <h1 className="pl-12">Dota 2 Draft Assistant</h1>  
-            <h4>A draft assistant for Dota 2</h4>
+            <h1 style={{fontFamily:'Optiwtcgoudy'}}>Dota 2 Draft Assistant</h1>  
           </div>
         </div>
         
-        <h1>Draft</h1>
+        
         
         {/* Team Headers */}
         
         <div className="absolute left-[600px]">
-          <h1 className="text-green-500">Radiant</h1>
+          <h1 style={{fontFamily:'Optiwtcgoudy',color:'Limegreen'}}>Radiant</h1>
         </div>
         
         <div className="absolute right-160">
-          <h1 className="text-red-500">Dire</h1>
+          <h1 style={{fontFamily:'Optiwtcgoudy',color:'red'}}>Dire</h1>
         </div>
+
+        
+
         
         <div className="max-w-screen-xl mx-auto px-4">
         {/* Hero Row 1 */}
@@ -144,9 +176,6 @@ function App() {
           />
           </div>
           
-          <div className="text-white">
-            <h2>Hero1</h2>
-          </div>
           
           <div className="block text-white h-40 w-40">
           <Select
@@ -175,9 +204,7 @@ function App() {
           />
           </div>
           
-          <div className="text-white">
-            <h2>Hero 2</h2>
-          </div>
+          
           
           <div className="block text-white h-40 w-40">
           <Select
@@ -206,9 +233,7 @@ function App() {
           />
           </div>
           
-          <div className="text-white">
-            <h2>Hero 3</h2>
-          </div>
+        
           
           <div className="block text-white h-40 w-40">
           <Select
@@ -237,9 +262,7 @@ function App() {
           />
           </div>
           
-          <div className="text-white">
-            <h2>Hero 4</h2>
-          </div>
+          
           
           <div className="block text-white h-40 w-40 ">
           <Select
@@ -266,10 +289,6 @@ function App() {
             }}
             index={8}
           />
-          </div>
-          
-          <div className="text-white">
-            <h2>Hero 5</h2>
           </div>
           
           <div className="block text-white h-40 w-40 ">
@@ -334,6 +353,11 @@ function App() {
         </div> 
       </div>
       </div>
+      </div>
+    
+      
+        
+        
       
     </>
   )
