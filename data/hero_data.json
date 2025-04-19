@@ -1,0 +1,752 @@
+{
+    "1": {
+      "name": "Anti-Mage",
+      "image": "/images/heroes/anti-mage.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Nuker"]
+    },
+    "2": {
+      "name": "Axe",
+      "image": "/images/heroes/axe.png",
+      "primary_attr": "str",
+      "roles": ["Initiator", "Durable", "Disabler", "Carry"]
+    },
+    "3": {
+      "name": "Bane",
+      "image": "/images/heroes/bane.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Disabler", "Nuker", "Durable"]
+    },
+    "4": {
+      "name": "Bloodseeker",
+      "image": "/images/heroes/bloodseeker.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Disabler", "Nuker", "Initiator"]
+    },
+    "5": {
+      "name": "Crystal Maiden",
+      "image": "/images/heroes/crystal_maiden.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Disabler", "Nuker"]
+    },
+    "6": {
+      "name": "Drow Ranger",
+      "image": "/images/heroes/drow_ranger.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Disabler", "Pusher"]
+    },
+    "7": {
+      "name": "Earthshaker",
+      "image": "/images/heroes/earthshaker.png",
+      "primary_attr": "str",
+      "roles": ["Support", "Initiator", "Disabler", "Nuker"]
+    },
+    "8": {
+      "name": "Juggernaut",
+      "image": "/images/heroes/juggernaut.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Pusher", "Escape"]
+    },
+    "9": {
+      "name": "Mirana",
+      "image": "/images/heroes/mirana.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Support", "Escape", "Nuker", "Disabler"]
+    },
+    "10": {
+      "name": "Morphling",
+      "image": "/images/heroes/morphling.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Durable", "Nuker", "Disabler"]
+    },
+    "11": {
+      "name": "Shadow Fiend",
+      "image": "/images/heroes/shadow_fiend.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Nuker"]
+    },
+    "12": {
+      "name": "Phantom Lancer",
+      "image": "/images/heroes/phantom_lancer.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Pusher", "Nuker"]
+    },
+    "13": {
+      "name": "Puck",
+      "image": "/images/heroes/puck.png",
+      "primary_attr": "int",
+      "roles": ["Initiator", "Disabler", "Escape", "Nuker"]
+    },
+    "14": {
+      "name": "Pudge",
+      "image": "/images/heroes/pudge.png",
+      "primary_attr": "str",
+      "roles": ["Initiator", "Disabler", "Durable", "Nuker"]
+    },
+    "15": {
+      "name": "Razor",
+      "image": "/images/heroes/razor.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Durable", "Nuker", "Pusher"]
+    },
+    "16": {
+      "name": "Sand King",
+      "image": "/images/heroes/sand_king.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Disabler", "Nuker", "Escape", "Support"]
+    },
+    "17": {
+      "name": "Storm Spirit",
+      "image": "/images/heroes/storm_spirit.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Escape", "Nuker", "Initiator", "Disabler"]
+    },
+    "18": {
+      "name": "Sven",
+      "image": "/images/heroes/sven.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Disabler", "Initiator", "Durable", "Nuker"]
+    },
+    "19": {
+      "name": "Tiny",
+      "image": "/images/heroes/tiny.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Nuker", "Pusher", "Initiator", "Durable", "Disabler"]
+    },
+    "20": {
+      "name": "Vengeful Spirit",
+      "image": "/images/heroes/vengeful_spirit.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Initiator", "Disabler", "Nuker", "Escape"]
+    },
+    "21": {
+      "name": "Windranger",
+      "image": "/images/heroes/windranger.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Support", "Disabler", "Escape", "Nuker"]
+    },
+    "22": {
+      "name": "Zeus",
+      "image": "/images/heroes/zeus.png",
+      "primary_attr": "int",
+      "roles": ["Nuker", "Carry"]
+    },
+    "23": {
+      "name": "Kunkka",
+      "image": "/images/heroes/kunkka.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Support", "Disabler", "Initiator", "Durable", "Nuker"]
+    },
+    "25": {
+      "name": "Lina",
+      "image": "/images/heroes/lina.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Support", "Nuker", "Disabler"]
+    },
+    "26": {
+      "name": "Lion",
+      "image": "/images/heroes/lion.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Disabler", "Nuker", "Initiator"]
+    },
+    "27": {
+      "name": "Shadow Shaman",
+      "image": "/images/heroes/shadow_shaman.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Pusher", "Disabler", "Nuker", "Initiator"]
+    },
+    "28": {
+      "name": "Slardar",
+      "image": "/images/heroes/slardar.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Durable", "Initiator", "Disabler", "Escape"]
+    },
+    "29": {
+      "name": "Tidehunter",
+      "image": "/images/heroes/tidehunter.png",
+      "primary_attr": "str",
+      "roles": ["Initiator", "Durable", "Disabler", "Nuker", "Carry"]
+    },
+    "30": {
+      "name": "Witch Doctor",
+      "image": "/images/heroes/witch_doctor.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Disabler"]
+    },
+    "31": {
+      "name": "Lich",
+      "image": "/images/heroes/lich.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Disabler"]
+    },
+    "32": {
+      "name": "Riki",
+      "image": "/images/heroes/riki.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Disabler"]
+    },
+    "33": {
+      "name": "Enigma",
+      "image": "/images/heroes/enigma.png",
+      "primary_attr": "uni",
+      "roles": ["Disabler", "Initiator", "Pusher", "Support"]
+    },
+    "34": {
+      "name": "Tinker",
+      "image": "/images/heroes/tinker.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Nuker", "Pusher"]
+    },
+    "35": {
+      "name": "Sniper",
+      "image": "/images/heroes/sniper.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Nuker"]
+    },
+    "36": {
+      "name": "Necrophos",
+      "image": "/images/heroes/necrophos.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Nuker", "Durable", "Disabler"]
+    },
+    "37": {
+      "name": "Warlock",
+      "image": "/images/heroes/warlock.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Initiator", "Disabler"]
+    },
+    "38": {
+      "name": "Beastmaster",
+      "image": "/images/heroes/beastmaster.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Disabler", "Durable", "Nuker", "Pusher"]
+    },
+    "39": {
+      "name": "Queen of Pain",
+      "image": "/images/heroes/queen_of_pain.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Nuker", "Escape"]
+    },
+    "40": {
+      "name": "Venomancer",
+      "image": "/images/heroes/venomancer.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Nuker", "Initiator", "Pusher", "Disabler"]
+    },
+    "41": {
+      "name": "Faceless Void",
+      "image": "/images/heroes/faceless_void.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Initiator", "Disabler", "Escape", "Durable"]
+    },
+    "42": {
+      "name": "Wraith King",
+      "image": "/images/heroes/wraith_king.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Support", "Durable", "Disabler", "Initiator"]
+    },
+    "43": {
+      "name": "Death Prophet",
+      "image": "/images/heroes/death_prophet.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Pusher", "Nuker", "Disabler"]
+    },
+    "44": {
+      "name": "Phantom Assassin",
+      "image": "/images/heroes/phantom_assassin.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape"]
+    },
+    "45": {
+      "name": "Pugna",
+      "image": "/images/heroes/pugna.png",
+      "primary_attr": "int",
+      "roles": ["Nuker", "Pusher", "Support"]
+    },
+    "46": {
+      "name": "Templar Assassin",
+      "image": "/images/heroes/templar_assassin.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape"]
+    },
+    "47": {
+      "name": "Viper",
+      "image": "/images/heroes/viper.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Durable", "Disabler", "Nuker"]
+    },
+    "48": {
+      "name": "Luna",
+      "image": "/images/heroes/luna.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Nuker", "Pusher"]
+    },
+    "49": {
+      "name": "Dragon Knight",
+      "image": "/images/heroes/dragon_knight.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Durable", "Disabler", "Initiator", "Pusher"]
+    },
+    "50": {
+      "name": "Dazzle",
+      "image": "/images/heroes/dazzle.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Nuker", "Disabler"]
+    },
+    "51": {
+      "name": "Clockwerk",
+      "image": "/images/heroes/clockwerk.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Disabler", "Durable", "Support"]
+    },
+    "52": {
+      "name": "Leshrac",
+      "image": "/images/heroes/leshrac.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Support", "Nuker", "Pusher", "Disabler"]
+    },
+    "53": {
+      "name": "Nature's Prophet",
+      "image": "/images/heroes/natures_prophet.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Pusher", "Escape", "Support", "Nuker"]
+    },
+    "54": {
+      "name": "Lifestealer",
+      "image": "/images/heroes/lifestealer.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Durable", "Escape", "Disabler"]
+    },
+    "55": {
+      "name": "Dark Seer",
+      "image": "/images/heroes/dark_seer.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Escape", "Disabler", "Support"]
+    },
+    "56": {
+      "name": "Clinkz",
+      "image": "/images/heroes/clinkz.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Pusher"]
+    },
+    "57": {
+      "name": "Omniknight",
+      "image": "/images/heroes/omniknight.png",
+      "primary_attr": "str",
+      "roles": ["Support", "Durable", "Disabler", "Nuker"]
+    },
+    "58": {
+      "name": "Enchantress",
+      "image": "/images/heroes/enchantress.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Pusher", "Durable", "Disabler"]
+    },
+    "59": {
+      "name": "Huskar",
+      "image": "/images/heroes/huskar.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Durable", "Initiator"]
+    },
+    "60": {
+      "name": "Night Stalker",
+      "image": "/images/heroes/night_stalker.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Initiator", "Durable", "Disabler", "Nuker"]
+    },
+    "61": {
+      "name": "Broodmother",
+      "image": "/images/heroes/broodmother.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Pusher", "Escape", "Nuker"]
+    },
+    "62": {
+      "name": "Bounty Hunter",
+      "image": "/images/heroes/bounty_hunter.png",
+      "primary_attr": "agi",
+      "roles": ["Escape", "Nuker", "Initiator", "Support"]
+    },
+    "63": {
+      "name": "Weaver",
+      "image": "/images/heroes/weaver.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Support"]
+    },
+    "64": {
+      "name": "Jakiro",
+      "image": "/images/heroes/jakiro.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Pusher", "Disabler"]
+    },
+    "65": {
+      "name": "Batrider",
+      "image": "/images/heroes/batrider.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Disabler", "Escape", "Support"]
+    },
+    "66": {
+      "name": "Chen",
+      "image": "/images/heroes/chen.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Pusher"]
+    },
+    "67": {
+      "name": "Spectre",
+      "image": "/images/heroes/spectre.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Durable", "Escape"]
+    },
+    "68": {
+      "name": "Ancient Apparition",
+      "image": "/images/heroes/ancient_apparition.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Disabler", "Nuker"]
+    },
+    "69": {
+      "name": "Doom",
+      "image": "/images/heroes/doom.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Initiator", "Disabler", "Durable", "Nuker"]
+    },
+    "70": {
+      "name": "Ursa",
+      "image": "/images/heroes/ursa.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Durable", "Disabler"]
+    },
+    "71": {
+      "name": "Spirit Breaker",
+      "image": "/images/heroes/spirit_breaker.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Initiator", "Disabler", "Durable", "Escape"]
+    },
+    "72": {
+      "name": "Gyrocopter",
+      "image": "/images/heroes/gyrocopter.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Nuker", "Disabler"]
+    },
+    "73": {
+      "name": "Alchemist",
+      "image": "/images/heroes/alchemist.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Support", "Durable", "Disabler", "Initiator", "Nuker"]
+    },
+    "74": {
+      "name": "Invoker",
+      "image": "/images/heroes/invoker.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Nuker", "Disabler", "Escape", "Pusher"]
+    },
+    "75": {
+      "name": "Silencer",
+      "image": "/images/heroes/silencer.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Support", "Disabler", "Initiator", "Nuker"]
+    },
+    "76": {
+      "name": "Outworld Destroyer",
+      "image": "/images/heroes/outworld_destroyer.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Nuker", "Disabler"]
+    },
+    "77": {
+      "name": "Lycan",
+      "image": "/images/heroes/lycan.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Pusher", "Durable", "Escape"]
+    },
+    "78": {
+      "name": "Brewmaster",
+      "image": "/images/heroes/brewmaster.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Initiator", "Durable", "Disabler", "Nuker"]
+    },
+    "79": {
+      "name": "Shadow Demon",
+      "image": "/images/heroes/shadow_demon.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Disabler", "Initiator", "Nuker"]
+    },
+    "80": {
+      "name": "Lone Druid",
+      "image": "/images/heroes/lone_druid.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Pusher", "Durable", "Support"]
+    },
+    "81": {
+      "name": "Chaos Knight",
+      "image": "/images/heroes/chaos_knight.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Disabler", "Durable", "Pusher", "Initiator"]
+    },
+    "82": {
+      "name": "Meepo",
+      "image": "/images/heroes/meepo.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Nuker", "Disabler", "Initiator", "Pusher"]
+    },
+    "83": {
+      "name": "Treant Protector",
+      "image": "/images/heroes/treant_protector.png",
+      "primary_attr": "str",
+      "roles": ["Support", "Initiator", "Durable", "Disabler", "Escape"]
+    },
+    "84": {
+      "name": "Ogre Magi",
+      "image": "/images/heroes/ogre_magi.png",
+      "primary_attr": "str",
+      "roles": ["Support", "Nuker", "Disabler", "Durable", "Initiator"]
+    },
+    "85": {
+      "name": "Undying",
+      "image": "/images/heroes/undying.png",
+      "primary_attr": "str",
+      "roles": ["Support", "Durable", "Disabler", "Nuker"]
+    },
+    "86": {
+      "name": "Rubick",
+      "image": "/images/heroes/rubick.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Disabler", "Nuker"]
+    },
+    "87": {
+      "name": "Disruptor",
+      "image": "/images/heroes/disruptor.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Disabler", "Nuker", "Initiator"]
+    },
+    "88": {
+      "name": "Nyx Assassin",
+      "image": "/images/heroes/nyx_assassin.png",
+      "primary_attr": "uni",
+      "roles": ["Disabler", "Nuker", "Initiator", "Escape"]
+    },
+    "89": {
+      "name": "Naga Siren",
+      "image": "/images/heroes/naga_siren.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Support", "Pusher", "Disabler", "Initiator", "Escape"]
+    },
+    "90": {
+      "name": "Keeper of the Light",
+      "image": "/images/heroes/keeper_of_the_light.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Disabler", "Pusher"]
+    },
+    "91": {
+      "name": "Io",
+      "image": "/images/heroes/io.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Escape", "Nuker"]
+    },
+    "92": {
+      "name": "Visage",
+      "image": "/images/heroes/visage.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Nuker", "Durable", "Pusher", "Disabler"]
+    },
+    "93": {
+      "name": "Slark",
+      "image": "/images/heroes/slark.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Disabler", "Nuker"]
+    },
+    "94": {
+      "name": "Medusa",
+      "image": "/images/heroes/medusa.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Disabler", "Durable"]
+    },
+    "95": {
+      "name": "Troll Warlord",
+      "image": "/images/heroes/troll_warlord.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Pusher", "Disabler", "Durable"]
+    },
+    "96": {
+      "name": "Centaur Warrunner",
+      "image": "/images/heroes/centaur_warrunner.png",
+      "primary_attr": "str",
+      "roles": ["Durable", "Initiator", "Disabler", "Nuker", "Escape"]
+    },
+    "97": {
+      "name": "Magnus",
+      "image": "/images/heroes/magnus.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Disabler", "Nuker", "Escape", "Carry"]
+    },
+    "98": {
+      "name": "Timbersaw",
+      "image": "/images/heroes/timbersaw.png",
+      "primary_attr": "uni",
+      "roles": ["Nuker", "Durable", "Escape"]
+    },
+    "99": {
+      "name": "Bristleback",
+      "image": "/images/heroes/bristleback.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Durable", "Initiator", "Nuker"]
+    },
+    "100": {
+      "name": "Tusk",
+      "image": "/images/heroes/tusk.png",
+      "primary_attr": "str",
+      "roles": ["Initiator", "Disabler", "Nuker", "Support"]
+    },
+    "101": {
+      "name": "Skywrath Mage",
+      "image": "/images/heroes/skywrath_mage.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Disabler"]
+    },
+    "102": {
+      "name": "Abaddon",
+      "image": "/images/heroes/abaddon.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Carry", "Durable"]
+    },
+    "103": {
+      "name": "Elder Titan",
+      "image": "/images/heroes/elder_titan.png",
+      "primary_attr": "str",
+      "roles": ["Initiator", "Disabler", "Nuker", "Durable", "Support"]
+    },
+    "104": {
+      "name": "Legion Commander",
+      "image": "/images/heroes/legion_commander.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Disabler", "Initiator", "Durable", "Nuker"]
+    },
+    "105": {
+      "name": "Techies",
+      "image": "/images/heroes/techies.png",
+      "primary_attr": "uni",
+      "roles": ["Nuker", "Disabler", "Support"]
+    },
+    "106": {
+      "name": "Ember Spirit",
+      "image": "/images/heroes/ember_spirit.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Nuker", "Disabler", "Initiator"]
+    },
+    "107": {
+      "name": "Earth Spirit",
+      "image": "/images/heroes/earth_spirit.png",
+      "primary_attr": "str",
+      "roles": ["Nuker", "Escape", "Disabler", "Initiator", "Durable", "Support"]
+    },
+    "108": {
+      "name": "Underlord",
+      "image": "/images/heroes/underlord.png",
+      "primary_attr": "str",
+      "roles": ["Support", "Nuker", "Disabler", "Durable", "Escape"]
+    },
+    "109": {
+      "name": "Terrorblade",
+      "image": "/images/heroes/terrorblade.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Pusher", "Nuker"]
+    },
+    "110": {
+      "name": "Phoenix",
+      "image": "/images/heroes/phoenix.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Nuker", "Initiator", "Escape", "Disabler"]
+    },
+    "111": {
+      "name": "Oracle",
+      "image": "/images/heroes/oracle.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Disabler", "Escape"]
+    },
+    "112": {
+      "name": "Winter Wyvern",
+      "image": "/images/heroes/winter_wyvern.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Disabler", "Nuker"]
+    },
+    "113": {
+      "name": "Arc Warden",
+      "image": "/images/heroes/arc_warden.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Nuker"]
+    },
+    "114": {
+      "name": "Monkey King",
+      "image": "/images/heroes/monkey_king.png",
+      "primary_attr": "agi",
+      "roles": ["Carry", "Escape", "Disabler", "Initiator"]
+    },
+    "119": {
+      "name": "Dark Willow",
+      "image": "/images/heroes/dark_willow.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Nuker", "Disabler", "Escape"]
+    },
+    "120": {
+      "name": "Pangolier",
+      "image": "/images/heroes/pangolier.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Nuker", "Disabler", "Durable", "Escape", "Initiator"]
+    },
+    "121": {
+      "name": "Grimstroke",
+      "image": "/images/heroes/grimstroke.png",
+      "primary_attr": "int",
+      "roles": ["Support", "Nuker", "Disabler", "Escape"]
+    },
+    "123": {
+      "name": "Hoodwink",
+      "image": "/images/heroes/hoodwink.png",
+      "primary_attr": "agi",
+      "roles": ["Nuker", "Escape", "Disabler", "Support"]
+    },
+    "126": {
+      "name": "Void Spirit",
+      "image": "/images/heroes/void_spirit.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Escape", "Nuker", "Disabler"]
+    },
+    "128": {
+      "name": "Snapfire",
+      "image": "/images/heroes/snapfire.png",
+      "primary_attr": "uni",
+      "roles": ["Support", "Nuker", "Disabler", "Escape"]
+    },
+    "129": {
+      "name": "Mars",
+      "image": "/images/heroes/mars.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Initiator", "Disabler", "Durable"]
+    },
+    "135": {
+      "name": "Dawnbreaker",
+      "image": "/images/heroes/dawnbreaker.png",
+      "primary_attr": "str",
+      "roles": ["Carry", "Durable", "Escape"]
+    },
+    "136": {
+      "name": "Marci",
+      "image": "/images/heroes/marci.png",
+      "primary_attr": "uni",
+      "roles": ["Carry", "Support", "Disabler", "Escape", "Initiator"]
+    },
+    "137": {
+      "name": "Primal Beast",
+      "image": "/images/heroes/primal_beast.png",
+      "primary_attr": "str",
+      "roles": ["Initiator", "Durable", "Disabler"]
+    },
+    "138": {
+      "name": "Muerta",
+      "image": "/images/heroes/muerta.png",
+      "primary_attr": "int",
+      "roles": ["Carry", "Nuker", "Disabler"]
+    },
+     "139": {
+      "name": "Ringmaster",
+      "image": "/images/heroes/ringmaster.png",
+      "primary_attr": "uni",
+      "roles": ["Initiator", "Disabler", "Escape", "Nuker", "Durable"]
+    }
+  }

@@ -1,0 +1,41 @@
+# === Logs ===
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# === Dependencies ===
+node_modules/
+.venv/
+.env
+*.pkl
+*.pt
+*.pth
+feature_maps.json
+
+# === Build output ===
+dist/
+dist-ssr/
+build/
+*.local
+
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === IDEs & Editors ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# === OS-generated ===
+ehthumbs.db
+Icon?
+Desktop.ini
