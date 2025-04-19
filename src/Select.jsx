@@ -647,7 +647,7 @@ import { CheckIcon } from '@heroicons/react/20/solid'
               <ChevronUpDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 size-5" />
             </ListboxButton>
     
-            <ListboxOptions className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
+            <ListboxOptions className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none opacity-">
               {heroes.map((hero) => (
                 <ListboxOption
                   key={hero.id}

@@ -96,12 +96,13 @@ function App() {
   
   return (
     <>
+    
       {/* Draft container with background image */}
       <div 
-        className="bg-[url(./assets/dota-dota2-radiant-dire-logo.webp)] bg-left pt-[300px]  flex flex-col gap-[1px] w-full h-1/2 bg-cover bg-left"
+        className="relative bg-[url(./assets/dota-dota2-radiant-dire-logo.webp)] bg-opacity-20 bg-left pt-[300px]  flex flex-col gap-[1px] w-full h-1/2 bg-cover bg-left "
       >
         {/* Navbar */}
-        <div className="flex items-center text-white w-full absolute top-0 left-0 right-0 z-10">
+        <div className="flex items-center text-white w-full absolute top-0 left-0 right-0 z-10 ">
           <a href="https://upload.wikimedia.org/wikipedia/commons/c/c2/Dota_logo.svg">
             <img 
               src={dotaLogo} 
@@ -119,16 +120,18 @@ function App() {
         <h1>Draft</h1>
         
         {/* Team Headers */}
-        <div className="absolute left-[10px]">
+        
+        <div className="absolute left-[600px]">
           <h1 className="text-green-500">Radiant</h1>
         </div>
         
-        <div className="absolute right-0">
+        <div className="absolute right-160">
           <h1 className="text-red-500">Dire</h1>
         </div>
         
+        <div className="max-w-screen-xl mx-auto px-4">
         {/* Hero Row 1 */}
-        <div className="flex flex-row justify-between w-full h-full">
+        <div className="flex flex-row justify-between gap-8 lg:gap-100 w-full h-full">
           <div className="block text-white h-40 w-40">
           <Select
             value={selectedHeroes[0]}
@@ -330,6 +333,8 @@ function App() {
           )}
         </div> 
       </div>
+      </div>
+      
     </>
   )
 }
