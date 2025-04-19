@@ -129,7 +129,7 @@ function App() {
         
         {/* Hero Row 1 */}
         <div className="flex flex-row justify-between w-full h-full">
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40">
           <Select
             value={selectedHeroes[0]}
             onChange={(val) => {
@@ -145,7 +145,7 @@ function App() {
             <h2>Hero1</h2>
           </div>
           
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40">
           <Select
             value={selectedHeroes[1]}
             onChange={(val) => {
@@ -160,7 +160,7 @@ function App() {
         
         {/* Hero Row 2 */}
         <div className="flex flex-row justify-between w-full h-full">
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[2]}
             onChange={(val) => {
@@ -176,7 +176,7 @@ function App() {
             <h2>Hero 2</h2>
           </div>
           
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40">
           <Select
             value={selectedHeroes[3]}
             onChange={(val) => {
@@ -191,7 +191,7 @@ function App() {
         
         {/* Hero Row 3 */}
         <div className="flex flex-row justify-between w-full h-full">
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[4]}
             onChange={(val) => {
@@ -207,7 +207,7 @@ function App() {
             <h2>Hero 3</h2>
           </div>
           
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40">
           <Select
             value={selectedHeroes[5]}
             onChange={(val) => {
@@ -222,7 +222,7 @@ function App() {
         
         {/* Hero Row 4 */}
         <div className="flex flex-row justify-between w-full h-full">
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[6]}
             onChange={(val) => {
@@ -238,7 +238,7 @@ function App() {
             <h2>Hero 4</h2>
           </div>
           
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[7]}
             onChange={(val) => {
@@ -253,7 +253,7 @@ function App() {
         
         {/* Hero Row 5 */}
         <div className="flex flex-row justify-between w-full h-full">
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[8]}
             onChange={(val) => {
@@ -269,7 +269,7 @@ function App() {
             <h2>Hero 5</h2>
           </div>
           
-          <div className="block text-white h-40 w-40 border-2 border-white">
+          <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[9]}
             onChange={(val) => {
@@ -284,7 +284,7 @@ function App() {
       </div>
 
       {/* Suggestion and Chart Container */}
-      <div className="flex w-full h-full justify-evenly border-2 border-white">
+      <div className="flex w-full h-full justify-evenly  ">
         <div className="mt-auto flex-col text-center border-x-white">
           <h2 className="text-white relative">Suggestion</h2>
           <h2>This column suggestion to players what heroes to pick, Top 10 heroes</h2>
