@@ -6,7 +6,16 @@
   height:auto;
   margin: 0 auto;
   text-align: center;
+  
 }
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+
+
+
 
 @font-face {
   font-family: 'Optiwtcgoudy';

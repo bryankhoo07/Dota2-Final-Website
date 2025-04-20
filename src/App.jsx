@@ -6,7 +6,6 @@ import Select from "./Select.jsx"
 import './App.css'
 import WinProbabilityChart from './Barchart.jsx'
 import { heroesIdMapping } from './heroesIdMapping';
-import { Colors } from 'chart.js'
 
 
 
@@ -123,14 +122,20 @@ function App() {
     
       {/* Draft container with background image */}
       
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-screen">
       {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-[url('./assets/dota-dota2-radiant-dire-logo.webp')] bg-cover bg-left" />
+      <div className="fixed inset-0 z-0 bg-color bg-left bg-no-repeat">
+      <div className="w-full h-full 
+                bg-[url('./assets/dota-dota2-radiant-dire-logo-laptopLarge.webp')] 
+                sm:bg-[url('./assets/dota-dota2-radiant-dire-logo-Small.jpg')] 
+                lg:bg-[url('./assets/dota-dota2-radiant-dire-logo-laptopLarge.webp')] 
+                2xl:bg-[url('./assets/dota-dota2-radiant-dire-logo-4k.jpg')] 
+                bg-cover bg-left" />
+
         <div className="absolute inset-0 bg-black opacity-30" />
       </div>
       {/* Foreground Content */}
-        <div className="relative z-10">
+        <div className="relative z-10 px-4 sm:px-8">
           {/*Navbar*/}
           <div className="flex items-center text-white w-full top-0 left-0 right-0 z-10 ">
           <a href="https://upload.wikimedia.org/wikipedia/commons/c/c2/Dota_logo.svg">
@@ -140,7 +145,6 @@ function App() {
               alt="Dota2 2 Logo"
             />
           </a>
-          
           <div>
             <h1 style={{fontFamily:'Optiwtcgoudy'}}>Dota 2 Draft Assistant</h1>  
           </div>
@@ -149,21 +153,16 @@ function App() {
         
         
         {/* Team Headers */}
-        
-        <div className="absolute left-[600px]">
-          <h1 style={{fontFamily:'Optiwtcgoudy',color:'Limegreen'}}>Radiant</h1>
-        </div>
-        
-        <div className="absolute right-160">
-          <h1 style={{fontFamily:'Optiwtcgoudy',color:'red'}}>Dire</h1>
+        <div className="flex justify-between gap- px-4 sm:px-8 md:px-24 lg:px-60 mt-4">
+          <h1 className="text-lime-500 font-bold text-xl sm:text-2xl text-center px-2" style={{ fontFamily: 'Optiwtcgoudy' }}>Radiant</h1>
+          <h1 className="text-red-500 font-bold text-xl sm:text-2xl text-center px-2" style={{ fontFamily: 'Optiwtcgoudy' }}>Dire</h1>
+
         </div>
 
-        
 
-        
         <div className="max-w-screen-xl mx-auto px-4">
         {/* Hero Row 1 */}
-        <div className="flex flex-row justify-between gap-8 lg:gap-100 w-full h-full">
+        <div className="flex justify-between w-full h-full px-2 sm:px-4 md:px-16">
           <div className="block text-white h-40 w-40">
           <Select
             value={selectedHeroes[0]}
@@ -191,7 +190,7 @@ function App() {
         </div>
         
         {/* Hero Row 2 */}
-        <div className="flex flex-row justify-between w-full h-full">
+        <div className="flex justify-between w-full h-full px-2 sm:px-8 md:px-16">
           <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[2]}
@@ -220,7 +219,7 @@ function App() {
         </div>
         
         {/* Hero Row 3 */}
-        <div className="flex flex-row justify-between w-full h-full">
+        <div className="flex justify-between w-full h-full px-2 sm:px-8 md:px-16">
           <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[4]}
@@ -249,7 +248,7 @@ function App() {
         </div>
         
         {/* Hero Row 4 */}
-        <div className="flex flex-row justify-between w-full h-full">
+        <div className="flex justify-between w-full h-full px-2 sm:px-8 md:px-16">
           <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[6]}
@@ -278,7 +277,7 @@ function App() {
         </div>
         
         {/* Hero Row 5 */}
-        <div className="flex flex-row justify-between w-full h-full">
+        <div className="flex justify-between w-full h-full px-2 sm:px-8 md:px-16">
           <div className="block text-white h-40 w-40 ">
           <Select
             value={selectedHeroes[8]}
@@ -306,7 +305,7 @@ function App() {
       </div>
 
       {/* Suggestion and Chart Container */}
-      <div className="flex w-full h-full justify-evenly  ">
+      <div className="flex flex-col md:flex-row w-full justify-evenly items-start mt-10 mb-10 px-4">
         <div className="mt-auto flex-col text-center border-x-white">
           <h2 className="text-white relative">Suggestion</h2>
           <h2>This column suggestion to players what heroes to pick, Top 10 heroes</h2>
