@@ -627,27 +627,32 @@ import { CheckIcon } from '@heroicons/react/20/solid'
       },
     ]
 
-
+    // The function for dropdown box
     function Select({value, onChange }) {
       return (
+        //Lists all the heroes available 
+        //First section renders through all available heroes selections, second part does updating and changes the status 
         <Listbox value={value} onChange={onChange}>
           <Label className="block text-sm/6 font-medium text-white">Select a Hero</Label>
           <div className="relative mt-2">
+            {/*Shows selection*/}
             <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 outline-gray-300 focus:outline-2">
               <span className="flex items-center gap-3 pr-6">
                 {value ? (
                   <>
+                    {/*If a hero exist, show avatar and name in the box.*/}
                     <img alt="" src={value.avatar} className="size-5 shrink-0 rounded-full" />
                     <span className="block truncate">{value.name}</span>
                   </>
                 ) : (
-                  <span className="text-gray-400">Choose a hero...</span>
+                  <span className="text-gray-400">Choose a hero</span>
                 )}
               </span>
               <ChevronUpDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 size-5" />
             </ListboxButton>
     
             <ListboxOptions className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none opacity-">
+              {/*Renders through all the heroes possible*/}
               {heroes.map((hero) => (
                 <ListboxOption
                   key={hero.id}
@@ -658,7 +663,8 @@ import { CheckIcon } from '@heroicons/react/20/solid'
                     <img src={hero.avatar} alt="" className="size-5 shrink-0 rounded-full" />
                     <span className="ml-3 block truncate">{hero.name}</span>
                   </div>
-    
+
+                  {/*Icon showed if selected */}
                   {value?.id === hero.id && (
                     <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600">
                       <CheckIcon className="size-5" aria-hidden="true" />

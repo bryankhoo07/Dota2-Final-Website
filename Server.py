@@ -171,20 +171,22 @@ class HeroRecommender(nn.Module):
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+#Load the 3rd pick suggestion model
 model3rdpick = pickle.load(open(os.path.join(BASE_DIR, 'draft_models', 'hero_recommender_3rd.pkl'), 'rb'))
 model3rdpick.eval()
 print("3rd hero prediction model loaded successfully")
 
-
+#Load the 4th pick suggestion model
 model4thpick = pickle.load(open(os.path.join(BASE_DIR, 'draft_models', 'hero_recommender_4th.pkl'), 'rb'))
 model4thpick.eval()
 print("4th hero prediction model loaded successfully")
 
-
+#Load the 5th pick suggestion model
 model5thpick = pickle.load(open(os.path.join(BASE_DIR, 'draft_models', 'hero_recommender_5th.pkl'), 'rb'))
 model5thpick.eval()
 print("5th hero prediction model loaded successfully")
 
+#Load the win probability model 
 winprobabilitymodel = joblib.load(open(os.path.join(BASE_DIR, 'draft_models', 'win_probability_model.pkl'), 'rb'))
 print("Win probability model loaded successfully")
 print(type(winprobabilitymodel))
@@ -227,7 +229,7 @@ def format_hero_img(name):
     return f"https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/{final_name}.png"
 
 
-# Load mappings and hero stats
+# Load hero stats for mapping purposes
 meta=pd.read_csv(os.path.join(BASE_DIR, 'data', 'dota2_hero_stats.csv'))
 print(meta.columns.tolist())
 
@@ -262,6 +264,7 @@ for index, row in meta.iterrows():
 ATTRIBUTES = ['str', 'agi', 'int', 'all']
 ROLES = ['Carry', 'Support', 'Nuker', 'Disabler', 'Jungler', 'Durable', 'Escape', 'Pusher', 'Initiator']
 
+#Create one hot encoding for each attribute
 def encode_attr(attr):
     if attr == 'str':
         return [1, 0, 0, 0]
@@ -272,9 +275,9 @@ def encode_attr(attr):
     elif attr == 'all':
         return [0, 0, 0, 1]
     else:
-        return [0, 0, 0, 0]  #Error Case
+        return [0, 0, 0, 0]  #Just in case the are attributes that are unreadable or error returned
     
-
+#Create one hot encoding for each role
 def encode_roles(role_list):
     role_vector = [0] * 9  # 9 roles
 
@@ -324,19 +327,19 @@ def preprocess_input(picked_hero_ids):
         role_idx = ROLES.index(primary_role)
         role_ids.append(role_idx)
 
-        # Only take stats from the first 4 heroes
+        # Only take stats from the first 4 heroes, and when using models for 3rd and 4th pick suggestion, it wont crash 
         if i < 4:
             stat_vec = [float(s) for s in hero["stats"].values()]
             hero_stats.extend(stat_vec)
 
-    # Ensure exactly 4 heroes worth of stats (4×19 = 76)
+    # Stat_dim is 76 based on the model 
     while len(hero_stats) < 76:
-        hero_stats.extend([0.0] * (76 - len(hero_stats)))  # pad with zeros if needed
+        hero_stats.extend([0.0] * (76 - len(hero_stats)))  
 
-    hero_ids = torch.tensor(hero_ids).long().unsqueeze(0)         # e.g. [1, 6]
-    attr_ids = torch.tensor(attr_ids).long().unsqueeze(0)         # e.g. [1, 6]
-    role_ids = torch.tensor(role_ids).long().unsqueeze(0)         # e.g. [1, 6]
-    hero_stats = torch.tensor(hero_stats).float().unsqueeze(0)    # shape: [1, 76]
+    hero_ids = torch.tensor(hero_ids).long().unsqueeze(0)         
+    attr_ids = torch.tensor(attr_ids).long().unsqueeze(0)         
+    role_ids = torch.tensor(role_ids).long().unsqueeze(0)         
+    hero_stats = torch.tensor(hero_stats).float().unsqueeze(0)    
 
     return hero_ids, attr_ids, role_ids, hero_stats
 
@@ -354,12 +357,14 @@ def suggest():
     heroes = data.get('heroes', [])
 
     if len(heroes) == 4:
-        # Pick the model you trained for 6 heroes
+        # Pick the model trained for 4 heroes
         model = model3rdpick
 
         # Preprocess
         hero_ids, attr_ids, role_ids, hero_stats = preprocess_input(heroes)
 
+        #Sets the model into evluation mode
+        #Pass input to the model and apply softmax to gain the top 10 hero id highest probabillity 
         model.eval()
         with torch.no_grad():
             output = model(hero_ids, attr_ids, role_ids, hero_stats)
@@ -379,7 +384,7 @@ def suggest():
         return jsonify({"suggestions": suggestions})
 
     elif len(heroes) == 6:
-        # Pick the model you trained for 6 heroes
+        # Pick the model trained for 6 heroes
         model = model4thpick
 
         # Preprocess
@@ -405,7 +410,7 @@ def suggest():
     
 
     elif len(heroes)==8:
-        # Pick the model you trained for 6 heroes
+        # Pick the model trained for 8 heroes
         model = model5thpick
 
         # Preprocess
@@ -454,9 +459,10 @@ def preprocess_win_input(hero_ids):
     # Start with all 0s
     one_hot_df = pd.DataFrame([[0] * len(correct_order)], columns=correct_order)
 
-    # Set selected heroes to 1
+    # For each selected heroes, set value to 1
     for id in hero_ids:
         col_name = f'hero_{id}'
+        
         if col_name in one_hot_df.columns:
             one_hot_df.at[0, col_name] = 1
         else:
@@ -473,7 +479,7 @@ def predict_win_probability():
         heroes = data.get("heroes", [])  # should be 10 total heroes
 
         if len(heroes) != 10:
-            return jsonify({"error": "Expected 10 hero IDs (5 Radiant + 5 Dire)."}), 400
+            return jsonify({"Please provide all 10 heroes"}), 400
 
         # You'll replace this with your real preprocessing logic
         input_vector = preprocess_win_input(heroes)  

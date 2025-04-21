@@ -47,7 +47,7 @@ function App() {
       });
   
       const data = await response.json();
-      setSuggestedHeroes(data.suggestions); // Assuming backend returns `{ suggestions: [ { name, avatar }, ... ] }`
+      setSuggestedHeroes(data.suggestions); 
     } catch (error) {
       console.error("Error getting suggestions:", error);
     }
@@ -107,22 +107,22 @@ function App() {
             <li>Pick heroes for Your Team (left) and Opponent's Team (right) using the dropdowns below.</li>
             <li>Once you have at least 2 Radiant and 2 Dire heroes selected, the assistant will suggest top picks at the bottom of the page</li>
             <li>The suggestor will constantly update for every pick from each team</li>
-            <li>Click the blue button below to see the win probability after all heroes are selected!</li>
+            <li>Click the blue button below to see the win probability after all 10 heroes are selected!</li>
           </ul>
           <button
             className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             onClick={() => setShowInstructions(false)}
           >
-            Got it!
+            Draft Begins!
           </button>
         </div>
       </div>
     )}
     
     
-      {/* Draft container with background image */}
-      
-      <div className="relative w-full min-h-screen">
+      {/* Draft container with Dota background image */}
+
+      <div className="relative w-full min-h-screen mt-10">
       {/* Background image */}
       <div className="fixed inset-0 z-0 bg-color bg-left bg-no-repeat">
       <div className="w-full h-full 
@@ -136,19 +136,24 @@ function App() {
       </div>
       {/* Foreground Content */}
         <div className="relative z-10 px-4 sm:px-8">
-          {/*Navbar*/}
-          <div className="flex items-center text-white w-full top-0 left-0 right-0 z-10 ">
-          <a href="https://upload.wikimedia.org/wikipedia/commons/c/c2/Dota_logo.svg">
-            <img 
-              src={dotaLogo} 
-              className="p-6 transition-all duration-300 hover:drop-shadow-[0_0_0.5em_rgba(100,108,255,0.67)]" 
-              alt="Dota2 2 Logo"
-            />
-          </a>
-          <div>
-            <h1 style={{fontFamily:'Optiwtcgoudy'}}>Dota 2 Draft Assistant</h1>  
+          {/* Navbar */}
+          <div className="flex justify-center items-center text-white w-full top-10 left-0 right-0 z-10">
+            <a href="Dota2 Draft Assistant/src/assets/Dota_logo.svg.png" className="flex items-center space-x-4">
+              <img 
+                src={dotaLogo} 
+                className="h-12 w-auto transition-all duration-300 hover:drop-shadow-[0_0_0.5em_rgba(100,108,255,0.67)]" 
+                alt="Dota2 Logo"
+              />
+              <h1 
+                className="text-2xl sm:text-3xl font-bold" 
+                style={{ fontFamily: 'Optiwtcgoudy' }}
+              >
+                Draft Assistant
+              </h1>
+            </a>
           </div>
-        </div>
+      
+
         
         
         
